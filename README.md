@@ -1,1 +1,14 @@
-# personal-auto-server-backup
+# Personal Server Backup
+### A simple `.sh` to backup `www`, `logs`, `nginx confs`, and `db dump` and `rsync` to local.
+<br>
+
+## What it does
+It backups your server as multiple `tar` files and `rsync`s them to your local machine.
+
+It backups the following:
+- `/var/www/`
+- `/var/log/`
+- `/etc/nginx/`
+- `mysqldump`
+
+I run this twice a month (1,15) using `cron`. Here's the cron: `0 6 1,15 * *`.
