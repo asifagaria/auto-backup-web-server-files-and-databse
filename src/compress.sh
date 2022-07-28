@@ -37,10 +37,10 @@ function compress_logs_dir() {
 	fi
 }
 
-function compress_nginx_conf_dir() {
-	step "Compressing nginx conf directory..."
+function compress_apache_conf_dir() {
+	step "Compressing apache conf directory..."
 
-	ssh  -p $3 -i $4 $2@$1 "tar -cvzf /tmp/$DIR_NAME/nginx_bak.tar.gz /etc/nginx" >> /dev/null 2>&1
+	ssh  -p $3 -i $4 $2@$1 "tar -cvzf /tmp/$DIR_NAME/apache_bak.tar.gz /etc/apache2" >> /dev/null 2>&1
 
 	if [ $? -ne 0 ]; then
 		error "Compressing nginx conf directory failed."
