@@ -8,7 +8,7 @@ It backups your server as multiple `tar` files and `rsync`s them to your local m
 It backups the following:
 - `/var/www/`
 - `/var/log/`
-- `/etc/apache/`
+- `/etc/apache2/`
 - `mysqldump`
 
 I run this twice a month (1,15) using `cron`. Here's the cron: `0 6 1,15 * *`.
